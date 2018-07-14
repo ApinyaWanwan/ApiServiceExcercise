@@ -19,10 +19,16 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.android.support:appcompat-v7:28.0.0-alpha3'
     implementation 'com.android.support.constraint:constraint-layout:1.1.2'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    //เรียกใช้งาน library Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    //converter ที่จะทำหน้าที่แปลงข้อมูลที่เป็น json ให้เป็น objects
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
+    //อาไว้ใช้สำหรับต้องการดูรายละเอียดค่าต่างๆที่ติดต่อไปยัง server ผ่าน log ได้
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.11.0'
 }
