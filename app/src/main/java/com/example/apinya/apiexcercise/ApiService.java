@@ -1,7 +1,5 @@
 package com.example.apinya.apiexcercise;
 
-import java.util.Collection;
-
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Query;
